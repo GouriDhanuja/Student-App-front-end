@@ -1,0 +1,51 @@
+
+    <!-- <div class="Register-box">
+   <img src="../../assets/grd.png" class="avatar" alt="">
+    <h1>Register Here</h1>
+    <form>
+    <p>Username</p>
+    <input  [(ngModel)]="uname"type="text" id="id"name="u_name" class="form-control" placeholder="enter Username">
+    <p>id</p>
+    <input [(ngModel)]="id" type="text" id="id" name="id"class="form-control" placeholder="enter id">
+    <p>Password</p>
+    <input  [(ngModel)]="pswd"type="text" id="pswd" name="pswd"class="form-control" placeholder="Enter password">
+    <input type="button" (click)="register()" value="register">
+
+    <a routerLink="">Sign in</a>
+    </form>
+
+
+</div> -->
+
+
+
+<div class="Register-box">
+    <img src="../../assets/grd.png" class="avatar" alt="">
+     <h1>Register Here</h1>
+     <form [formGroup]="registerForm">
+     <p>Username</p>
+     <p *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched" style="color: red;">Invalid Username</p>
+     <input formControlName="uname" type="text" id="uname" name="u_name"class="form-control" placeholder="Enter username">
+     <p>id</p>
+     <p *ngIf="this.registerForm.get('id')?.errors && this.registerForm.get('id')?.touched" style="color: red;">Invalid id</p>
+
+     <input  formControlName="id" type="text" id="id" name="id" class="form-control" placeholder="enter id">
+     <p>Password</p>
+     <p *ngIf="this.registerForm.get('pswd')?.errors && this.registerForm.get('pswd')?.touched" style="color: red;">Invalid password</p>
+
+     <input  formControlName="pswd" type="text" id="pswd" name="pswd"class="form-control" placeholder="Enter password">
+     <p>Phone number</p>
+     <p *ngIf="this.registerForm.get('phno')?.errors && this.registerForm.get('phno')?.touched" style="color: red;">Invalid phonenumber</p>
+
+     <input  formControlName="phno"type="text" id="phno" name="phno"class="form-control" placeholder="Enter number">
+     <p>Qualification</p>
+     <p *ngIf="this.registerForm.get('qfcn')?.errors && this.registerForm.get('qfcn')?.touched" style="color: red;">Invalid Qualification</p>
+
+     <input formControlName="qfcn" type="text" id="qfcn"  name="qfcn" class="form-control" placeholder="Enter Qualifiation">
+     <input type="button" (click)="register()" value="register">
+     <a routerLink="">Sign in</a>
+     </form>
+ 
+ 
+ </div>
+

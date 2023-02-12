@@ -1,0 +1,19 @@
+<div class="login-box">
+    <img src="../../assets/grd.png" class="avatar" alt="">
+     <h1>Login Here</h1>
+     <form [formGroup]="loginForm">
+     <p>id</p>
+     <p *ngIf="this.loginForm.get('id')?.errors && this.loginForm.get('id')?.touched" style="color: red;">Invalid id</p>
+
+     <input formControlName="id" type="text" id="id" name="id" class="form-control" placeholder=" Enter Id">
+     <p>Password</p>
+     <p *ngIf="this.loginForm.get('pswd')?.errors && this.loginForm.get('pswd')?.touched" style="color: red;">Invalid password</p>
+
+     <input formControlName="pswd" type="text" id="pswd"  name="pswd" class="form-control" placeholder="Enter password">
+     <input type="button" (click)="login()" value="login">
+     <a routerLink="register">sign up</a>
+
+     <!-- <app-register></app-register> -->
+     </form>
+     </div>
+     

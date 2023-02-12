@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Upright:wght@300&family=Dancing+Script&family=EB+Garamond:ital,wght@0,700;1,400;1,500;1,700&family=Gemunu+Libre:wght@300&family=Josefin+Sans:ital@1&family=Orbitron:wght@400;700&family=Playfair+Display&display=swap');
+
+h1{
+    font-family: 'EB Garamond', serif; 
+
+}
